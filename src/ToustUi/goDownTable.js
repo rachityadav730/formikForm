@@ -44,9 +44,4 @@ const MyEnhancedForm = withFormik({
     displayName: 'BasicForm',
   })(GoDownTable);
 
-
-
-
-
-
 export default MyEnhancedForm;
