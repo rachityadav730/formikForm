@@ -1,10 +1,9 @@
 import React from 'react';
-import GoDownTable from './goDownTable';
+import SignInPage from './SignInPage';
 const initial =()=>{
     return(
         <>
-        <h1>Godown form</h1>
-        <GoDownTable/>
+        <SignInPage/>
         </>
 
     )

@@ -5,12 +5,12 @@ import Button from 'react-bootstrap/Button';
 import { Formik } from 'formik';
 import InitialValues from './const'
 import { withFormik } from 'formik';
-
+import SignInForm from './SignInForm'
 const GoDownTable = (props)=>{
     console.log("allprops",props)
     return(
         <>
-        <FormikForm {...props}/>
+        <SignInForm {...props}/>
         </>
     )
 }
