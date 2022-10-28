@@ -20,12 +20,19 @@ const MyEnhancedForm = withFormik({
         name: '',
         batch_no:'',
         serial_no:'',
-        expiry_date:''
+        expiry_date:'',
+        quantity:0,
      }),
   
     // Custom sync validation
     validate: values => {
       const errors = {};
+
+      console.log("valuesvaluesvaluesvaluesvalues",values)
+
+      if (values.quantity >  500){
+        errors.quantity = 'value is more than 50';
+      }
   
       if (!values.name) {
         errors.name = 'Required';
@@ -35,6 +42,7 @@ const MyEnhancedForm = withFormik({
     },
   
     handleSubmit: (values, { setSubmitting }) => {
+      console.log("valueshandlesubmit",values)
       setTimeout(() => {
         alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
